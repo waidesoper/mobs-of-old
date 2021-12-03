@@ -21,7 +21,7 @@ public class HostileEntityMixin {
         if (world.getLightLevel(LightType.SKY, pos) > random.nextInt(32)) {
             return false;
         }
-        if (world.getLightLevel(LightType.BLOCK, pos) < 8) {
+        if (world.getLightLevel(LightType.BLOCK, pos) > 7) {
             return false;
         }
         int i = world.toServerWorld().isThundering() ? world.getLightLevel(pos, 10) : world.getLightLevel(pos);
