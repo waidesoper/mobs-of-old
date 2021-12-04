@@ -14,6 +14,7 @@ import org.spongepowered.asm.mixin.Overwrite;
 public class SpawnHelperMixin {
     /**
      * @author WaideSoper
+     * @reason Because I want mobs to prefer spawning near the top of the world
      */
     @Overwrite
     private static BlockPos getRandomPosInChunkSection(World world, WorldChunk chunk) {

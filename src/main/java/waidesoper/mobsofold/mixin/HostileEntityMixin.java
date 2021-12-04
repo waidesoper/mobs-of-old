@@ -15,6 +15,7 @@ public class HostileEntityMixin {
 
     /**
      * @author WaideSoper
+     * @reason to make mobs spawn in slightly higher light levels, like they used to.
      */
     @Overwrite
     public static boolean isSpawnDark(ServerWorldAccess world, BlockPos pos, Random random) {
