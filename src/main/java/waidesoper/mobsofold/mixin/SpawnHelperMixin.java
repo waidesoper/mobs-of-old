@@ -8,12 +8,14 @@ import net.minecraft.world.SpawnHelper;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.WorldChunk;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Overwrite;
 
 @Mixin(SpawnHelper.class)
 public class SpawnHelperMixin {
     /**
      * @author WaideSoper
      */
+    @Overwrite
     private static BlockPos getRandomPosInChunkSection(World world, WorldChunk chunk) {
         ChunkPos chunkPos = chunk.getPos();
         int i = chunkPos.getStartX() + world.random.nextInt(16);
